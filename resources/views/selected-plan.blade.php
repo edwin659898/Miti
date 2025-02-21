@@ -129,7 +129,7 @@
                                    <!-- Mpesa, Airtel Money -->
                                     <input type="radio" name="payment_method" value="ipay" id="Radio1" onchange="setPaymentMethod('ipay')" />
                                     <label class="list-group-item text-yellow-700 bg-gray-100 hover:bg-yellow-200 p-2 rounded" for="Radio1">
-                                        <img width="90" alt="card" src="/storage/mtn.jpg">
+                                        <img width="90" alt="card" src="/storage/mpesa.png">
                                         Mpesa, Airtel Money
                                     </label> 
                                     {{-- <button type="submit" class="btn"><a href="{{$currency->currency()}}{{$amount}}" class="btn btn-danger">M-Pesa/MTN</a></button> --}}
