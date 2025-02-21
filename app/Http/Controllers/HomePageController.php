@@ -31,7 +31,7 @@ class HomePageController extends Controller
 public function showMtnPage()
 {
     $amount = 100; // Example default value
-    return view('home.mtn', compact('amount'));
+    return view('home.mtn', compact('amount')); 
 }
 
 }

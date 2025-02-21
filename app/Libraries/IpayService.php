@@ -18,7 +18,7 @@ class IpayService
             "vid" => self::VID,
             "curr" => $data['currency'],
             "cbk" => $data['url'],
-            "cst" => $data['amount'],
+            // "cst" => $data['amount'],
             "crl" => "2"
         );
         $hash = hash_hmac('sha1', implode('', array_values($fields)), self::KEY);
