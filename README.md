@@ -89,5 +89,6 @@ Contributions are welcome! Follow these steps:
 This project is licensed under the MIT License.
 
 ## Contact
-For support, reach out to [your-email@example.com](mailto:your-email@example.com).
+For support, reach out to [edwinkiuma.com](mailto:edwinkiuma.com).
+(https://miti-magazine.betterglobeforestry.com/) Website to Miti App
 
