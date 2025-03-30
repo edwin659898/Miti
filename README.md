@@ -1,62 +1,93 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# Miti Magazine Laravel App
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Introduction
+Miti Magazine is a Laravel-based web application that allows users to browse, read, and subscribe to digital books online. The platform provides a seamless subscription-based payment system using Mpesa, Stripe, and PayPal.
 
-## About Laravel
+## Features
+- Browse and view digital books online
+- Subscription-based access to premium content
+- Secure payment integration with Mpesa, Stripe, and PayPal
+- User authentication and account management
+- Admin panel for managing books and subscriptions
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Technologies Used
+- **Backend:** Laravel (PHP Framework)
+- **Frontend:** Blade templates, Tailwind CSS
+- **Database:** MySQL
+- **Payment Gateways:** Mpesa, Stripe, PayPal
+- **Authentication:** Laravel Sanctum / Laravel Breeze
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Installation
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Prerequisites
+Ensure you have the following installed on your system:
+- PHP >= 8.0
+- Composer
+- MySQL
+- Node.js & NPM
 
-## Learning Laravel
+### Setup Steps
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/yourusername/miti-magazine.git
+   cd miti-magazine
+   ```
+2. Install dependencies:
+   ```sh
+   composer install
+   npm install && npm run dev
+   ```
+3. Set up environment variables:
+   ```sh
+   cp .env.example .env
+   ```
+   Configure database, payment credentials, and other required settings in the `.env` file.
+4. Generate application key:
+   ```sh
+   php artisan key:generate
+   ```
+5. Run migrations and seed database:
+   ```sh
+   php artisan migrate --seed
+   ```
+6. Serve the application:
+   ```sh
+   php artisan serve
+   ```
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Payment Integration
+The platform supports three payment gateways:
+- **Mpesa** (via Daraja API)
+- **Stripe** (for credit/debit card transactions)
+- **PayPal** (for global transactions)
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Configuring Payments
+Set the respective API keys in the `.env` file:
+```env
+MPESA_CONSUMER_KEY=your_mpesa_consumer_key
+MPESA_CONSUMER_SECRET=your_mpesa_consumer_secret
+STRIPE_KEY=your_stripe_key
+STRIPE_SECRET=your_stripe_secret
+PAYPAL_CLIENT_ID=your_paypal_client_id
+PAYPAL_SECRET=your_paypal_secret
+```
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+## Usage
+1. Register or log in as a user.
+2. Browse available books.
+3. Subscribe to a plan using the available payment options.
+4. Access premium books upon successful payment.
 
 ## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Contributions are welcome! Follow these steps:
+1. Fork the repository.
+2. Create a new feature branch.
+3. Commit changes and push to your fork.
+4. Submit a pull request for review.
 
 ## License
+This project is licensed under the MIT License.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Contact
+For support, reach out to [your-email@example.com](mailto:your-email@example.com).
+
